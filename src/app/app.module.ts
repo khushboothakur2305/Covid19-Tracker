@@ -7,21 +7,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { MaterialModuleModule } from "./material/material-module/material-module.module";
+import { MaterialModuleModule } from './material/material-module/material-module.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CountriesComponent } from './components/countries/countries.component';
+import { FormsModule } from '@angular/forms';
+import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    CountriesComponent,
+    DashboardCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
