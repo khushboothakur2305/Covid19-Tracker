@@ -1,1 +1,7 @@
-
+<app-dashboard-card
+  [totalConfirmed]="totalConfirmed"
+  [totalActive]="totalActive"
+  [totalDeaths]="totalDeaths"
+  [totalRecovered]="totalRecovered"
+></app-dashboard-card>
+<google-chart [data]="pieChart"></google-chart>

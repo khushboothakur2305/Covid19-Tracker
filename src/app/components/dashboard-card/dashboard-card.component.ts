@@ -6,7 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./dashboard-card.component.scss']
 })
 export class DashboardCardComponent implements OnInit {
-@Input('totalActive')
+@Input('totalActive')totalActive;
+@Input('totalConfirmed')totalConfirmed;
+@Input('totalDeaths')totalDeaths;
+@Input('totalRecovered')totalRecovered;
   constructor() { }
 
   ngOnInit(): void {
