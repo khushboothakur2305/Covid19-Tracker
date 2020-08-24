@@ -4,6 +4,76 @@
   [totalDeaths]="totalDeaths"
   [totalRecovered]="totalRecovered"
 ></app-dashboard-card>
+<div class="ui-form">
+  <div class="inline fields">
+    <label for="confirmed">Select Case Type</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input
+          type="radio"
+          value="con"
+          name="casetype"
+          checked=""
+          id="c"
+          tabindex="0"
+          class="hidden"
+          #c
+          (click)="updateChart(c)"
+        />
+        <label for="c">Confirmed</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input
+          type="radio"
+          value="dea"
+          id="d"
+          name="casetype"
+          checked=""
+          tabindex="0"
+          class="hidden"
+          #d
+          (click)="updateChart(d)"
+        />
+        <label for="d">Deaths</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input
+          type="radio"
+          value="rec"
+          id="r"
+          name="casetype"
+          checked=""
+          tabindex="0"
+          class="hidden"
+          #r
+          (click)="updateChart(r)"
+        />
+        <label for="r">Recovered</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input
+          type="radio"
+          id="a"
+          value="act"
+          name="casetype"
+          checked=""
+          tabindex="0"
+          class="hidden"
+          #a
+          (click)="updateChart(a)"
+        />
+        <label for="a">Active</label>
+      </div>
+    </div>
+  </div>
+</div>
+
 <button type="button" mdbBtn color="secondary" mdbWavesEffect (click)="onpie()">
   Pie
 </button>
@@ -20,3 +90,5 @@
   <google-chart [data]="columnChart"></google-chart>
 </div>
 <div *ngIf="pie === true"><google-chart [data]="pieChart"></google-chart></div>
+<!-- <google-chart [data]="pieChart"></google-chart>
+<google-chart [data]="columnChart"></google-chart> -->

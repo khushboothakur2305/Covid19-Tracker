@@ -17,6 +17,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // For MDB Angular Free
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { DateWiseData } from "./models/date-wise-data";
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     MatCardModule,
     ChartsModule,
     WavesModule,
-    Ng2GoogleChartsModule
+    Ng2GoogleChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
