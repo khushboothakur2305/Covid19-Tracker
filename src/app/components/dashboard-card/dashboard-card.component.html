@@ -1,4 +1,32 @@
-Active : {{totalActive}}<br>
-Confirmed : {{totalConfirmed}}<br>
-Deaths : {{totalDeaths}}<br>
-Recovered : {{totalRecovered}}
+<br>
+<div fxHide.lt-md>
+  <div fxLayout fxLayoutGap="40px" fxLayoutAlign="center center">
+    <section>
+      <mat-card fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <mat-card-title>Active</mat-card-title>
+        <mat-card-content>{{ totalActive }}</mat-card-content>
+      </mat-card>
+
+
+    </section>
+    <section>
+      <mat-card fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <mat-card-title>Confirmed</mat-card-title>
+        <mat-card-content>{{ totalConfirmed }}</mat-card-content> </mat-card
+      >
+    </section>
+    <section>
+      <mat-card fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <mat-card-title>Deaths</mat-card-title>
+        <mat-card-content>{{ totalDeaths }}</mat-card-content> </mat-card
+      >
+    </section>
+    <section>
+      <mat-card fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <mat-card-title>Recovered</mat-card-title>
+        <mat-card-content>{{ totalRecovered }}</mat-card-content>
+      </mat-card>
+    </section>
+  </div>
+</div>
+<br>

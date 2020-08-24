@@ -1,15 +1,7 @@
-<p>countries works!</p>
-<!-- <mat-form-field appearance="fill">
-  <mat-label for="c">Select Countries</mat-label>
-  <mat-select name="" id="c" #input (change)='updateValues(input.value)'>
-    <mat-option value="{{country}}" *ngFor="let country of countries">{{country}}</mat-option>
-  </mat-select>
-</mat-form-field> -->
-
 <div>
   <label for="c">Select Countries</label>
-  <select name="" id="c" #input (change)="updateValues(input.value)">
-    <option value="{{ country }}" *ngFor="let country of countries">{{
+  <select name="" id="c" #input (change)="updateValues(input.value)" >
+    <option value="{{ country }}" *ngFor="let country of countries" >{{
       country
     }}</option>
   </select>

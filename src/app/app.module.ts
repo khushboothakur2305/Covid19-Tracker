@@ -12,7 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountriesComponent } from './components/countries/countries.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component';
-import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { MatCardModule } from '@angular/material/card';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// For MDB Angular Free
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,7 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     DashboardCardComponent,
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -29,7 +33,9 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     MaterialModuleModule,
     HttpClientModule,
     FormsModule,
-    Ng2GoogleChartsModule,
+    MatCardModule,
+    ChartsModule,
+    WavesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
