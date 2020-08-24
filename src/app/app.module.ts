@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // For MDB Angular Free
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     MatCardModule,
     ChartsModule,
     WavesModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

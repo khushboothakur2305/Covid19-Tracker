@@ -4,4 +4,19 @@
   [totalDeaths]="totalDeaths"
   [totalRecovered]="totalRecovered"
 ></app-dashboard-card>
-<button type="button" mdbBtn color="secondary" mdbWavesEffect>Secondary</button>
+<button type="button" mdbBtn color="secondary" mdbWavesEffect (click)="onpie()">
+  Pie
+</button>
+<button
+  type="button"
+  mdbBtn
+  color="secondary"
+  mdbWavesEffect
+  (click)="oncolumn()"
+>
+  Column
+</button>
+<div *ngIf="column === true">
+  <google-chart [data]="columnChart"></google-chart>
+</div>
+<div *ngIf="pie === true"><google-chart [data]="pieChart"></google-chart></div>
