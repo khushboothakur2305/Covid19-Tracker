@@ -35,7 +35,6 @@ export class DataServiceService {
             mainData[con].push(dateWise);
           });
         });
-
         return result;
       })
     );

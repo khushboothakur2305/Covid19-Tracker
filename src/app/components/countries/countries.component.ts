@@ -15,14 +15,13 @@ export class CountriesComponent implements OnInit {
   totalActive = 0;
   totalDeaths = 0;
   totalRecovered = 0;
-  selectCountryData:DateWiseData[];
+  selectCountryData: DateWiseData[];
   dateWiseData;
   constructor(private dataService: DataServiceService) {}
 
   ngOnInit(): void {
-    this.dataService.getDatewiseData().subscribe(res=>{
-   this.dateWiseData=res
-
+    this.dataService.getDatewiseData().subscribe((res) => {
+      this.dateWiseData = res;
     });
     this.dataService.getGlobalData().subscribe((result) => {
       this.data = result;
@@ -35,13 +34,14 @@ export class CountriesComponent implements OnInit {
     console.log(country);
     this.data.forEach((cs) => {
       if (cs.country == country) {
+        console.log(cs.country);
         this.totalActive = cs.active;
         this.totalConfirmed = cs.confirmed;
         this.totalDeaths = cs.deaths;
         this.totalRecovered = cs.recovered;
       }
-    })
-   this.selectCountryData= this.dateWiseData[country];
-   console.log(this.selectCountryData);
+    });
+    this.selectCountryData = this.dateWiseData[country];
+    console.log(this.selectCountryData);
   }
 }
