@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { Covid19Component } from './components/covid19/covid19.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     HomeComponent,
     CountriesComponent,
     DashboardCardComponent,
+    Covid19Component,
   ],
   imports: [
     BrowserModule,

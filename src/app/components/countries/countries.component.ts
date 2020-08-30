@@ -19,7 +19,13 @@ export class CountriesComponent implements OnInit {
   totalRecovered = 0;
   selectedCountryData: DateWiseData[];
   dateWiseData;
-
+  datatable = [];
+  // chart = {
+  //   PieChart: 'PieChart',
+  //   ColumnChart: 'ColumnChart',
+  //   LineChart: 'LineChart',
+  //   height: 500,
+  // };
   constructor(private service: DataServiceService) {}
 
   ngOnInit(): void {
@@ -54,7 +60,17 @@ export class CountriesComponent implements OnInit {
         this.totalConfirmed = cs.confirmed;
       }
     });
-
     this.selectedCountryData = this.dateWiseData[country];
+
+    // this.initChart();
   }
+
+  // initChart() {
+  //   this.datatable = [];
+  //   this.datatable.push(["Date", "Cases"])
+  //   this.dateWiseData.forEach((cs) => {
+  //     this.datatable.push([cs.date, cs.cases]);
+  //   });
+  //   console.log(this.datatable);
+  // }
 }
