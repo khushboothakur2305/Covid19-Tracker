@@ -18,6 +18,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { DateWiseData } from "./models/date-wise-data";
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { DateWiseData } from "./models/date-wise-data";
     WavesModule,
     Ng2GoogleChartsModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

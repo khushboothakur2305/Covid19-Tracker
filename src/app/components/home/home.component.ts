@@ -8,8 +8,8 @@ import { GoogleChartInterface } from 'ng2-google-charts';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-   pie:boolean=null;
-   column:boolean=null;
+  pie: boolean = null;
+  column: boolean = null;
   totalConfirmed = 0;
   totalActive = 0;
   totalDeaths = 0;
@@ -91,14 +91,14 @@ export class HomeComponent implements OnInit {
       },
     });
   }
-      onpie(){
-        this.pie=true;
-        this.column=false;
-      }
-    oncolumn(){
-      this.pie=false;
-      this.column=true;
-    }
+  onpie() {
+    this.pie = true;
+    this.column = false;
+  }
+  oncolumn() {
+    this.pie = false;
+    this.column = true;
+  }
   updateChart(input: HTMLInputElement) {
     console.log(input.value);
     this.initChart(input.value);
