@@ -20,13 +20,6 @@ export class CountriesComponent implements OnInit {
   selectedCountryData: DateWiseData[];
   dateWiseData;
   loading = true;
-  options: {
-    height: 500;
-    animation: {
-      duration: 1000;
-      easing: 'out';
-    };
-  };
 
   constructor(private service: DataServiceService) {}
 
@@ -53,14 +46,6 @@ export class CountriesComponent implements OnInit {
     });
   }
 
-  updateChart() {
-    let dataTable = [];
-    dataTable.push(['Date', 'Cases']);
-    this.selectedCountryData.forEach((cs) => {
-      dataTable.push([cs.date, cs.cases]);
-    });
-  }
-
   updateValues(country: string) {
     console.log(country);
     this.data.forEach((cs) => {
@@ -73,7 +58,5 @@ export class CountriesComponent implements OnInit {
     });
 
     this.selectedCountryData = this.dateWiseData[country];
-    // console.log(this.selectedCountryData);
-    this.updateChart();
   }
 }
