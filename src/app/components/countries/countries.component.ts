@@ -19,7 +19,6 @@ export class CountriesComponent implements OnInit {
   totalRecovered = 0;
   selectedCountryData: DateWiseData[];
   dateWiseData;
-  loading = true;
 
   constructor(private service: DataServiceService) {}
 
@@ -41,7 +40,6 @@ export class CountriesComponent implements OnInit {
     ).subscribe({
       complete: () => {
         this.updateValues('India');
-        this.loading = false;
       },
     });
   }

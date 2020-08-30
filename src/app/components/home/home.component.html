@@ -1,7 +1,3 @@
-<div class="ui inverted dimmer" [class.active]="loading">
-  <div class="ui text loader">Loading</div>
-</div>
-
 <div class="jumbotron bg-white text-center p-0 m-0">
   <h1 class="display-4">Corona Covid-19 Tracker</h1>
   <hr />
@@ -85,7 +81,6 @@
     <div class="col">
       <google-chart
         [type]="chart.PieChart"
-        [options]="chart.options"
         style="width: 100%"
         [height]="chart.height"
         [data]="datatable"
@@ -95,7 +90,6 @@
       <google-chart
         [type]="chart.ColumnChart"
         style="width: 100%"
-        [options]="chart.options"
         [height]="chart.height"
         [data]="datatable"
       ></google-chart>

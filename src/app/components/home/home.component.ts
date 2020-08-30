@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   totalActive = 0;
   totalDeaths = 0;
   totalRecovered = 0;
-  loading = true;
   globalData: GlobalDataSummary[];
   datatable = [];
   chart = {
@@ -19,13 +18,6 @@ export class HomeComponent implements OnInit {
     ColumnChart: 'ColumnChart',
     LineChart: 'LineChart',
     height: 500,
-    options: {
-      animation: {
-        duration: 1000,
-        easing: 'out',
-      },
-      is3D: true,
-    },
   };
 
   constructor(private dataService: DataServiceService) {}
@@ -46,9 +38,6 @@ export class HomeComponent implements OnInit {
 
         this.initChart('c');
       },
-      complete: () => {
-        this.loading = false;
-      },
     });
   }
 
@@ -63,12 +52,10 @@ export class HomeComponent implements OnInit {
 
     this.globalData.forEach((cs) => {
       let value: number;
-      if (caseType == 'c') if (cs.confirmed > 2000) value = cs.confirmed;
-
-      if (caseType == 'a') if (cs.active > 2000) value = cs.active;
-      if (caseType == 'd') if (cs.deaths > 1000) value = cs.deaths;
-
-      if (caseType == 'r') if (cs.recovered > 2000) value = cs.recovered;
+      if (caseType == 'c') if (cs.confirmed > 0) value = cs.confirmed;
+      if (caseType == 'a') if (cs.active > 0) value = cs.active;
+      if (caseType == 'd') if (cs.deaths > 0) value = cs.deaths;
+      if (caseType == 'r') if (cs.recovered > 0) value = cs.recovered;
 
       this.datatable.push([cs.country, value]);
     });
