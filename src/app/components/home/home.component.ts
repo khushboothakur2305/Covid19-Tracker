@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
     PieChart: 'PieChart',
     ColumnChart: 'ColumnChart',
     LineChart: 'LineChart',
+    backgroundColor: '#E4E4E4',
     height: 500,
+    width: 1000,
   };
 
   constructor(private dataService: DataServiceService) {}
@@ -48,8 +50,6 @@ export class HomeComponent implements OnInit {
 
   initChart(caseType: string) {
     this.datatable = [];
-    // this.datatable.push(["Country", "Cases"])
-
     this.globalData.forEach((cs) => {
       let value: number;
       if (caseType == 'c') if (cs.confirmed > 0) value = cs.confirmed;
