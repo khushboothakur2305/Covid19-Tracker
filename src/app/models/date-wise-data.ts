@@ -1,5 +1,5 @@
-export interface DateWiseData{
-  country ?:string ,
-  cases ?: number ,
-  date  ?: Date
+export interface DateWiseData {
+  country?: string;
+  cases?: number;
+  date?: Date;
 }
