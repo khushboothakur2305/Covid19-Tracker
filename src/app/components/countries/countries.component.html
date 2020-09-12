@@ -1,10 +1,12 @@
-<div class="jumbotron bg-white text-center p-0 m-0">
-  <h1 class="display-4">Corona Covid-19 Tracker Country Wise</h1>
-  <hr />
-
-  <div class="mx-auto">
-    <div class="form-group col-lg-5 mx-auto">
-      <label for="c">Select Country</label>
+<div class="container">
+  <img class="back" src="\assets\Images\Covid19\back.png" style="width: 100%" />
+  <div class="centered">
+<div >
+  <h1 >Corona Covid-19 Tracker Country Wise</h1>
+<br><br>
+  <div >
+    <div >
+      <label for="c">Select Country</label><br>
       <select
         name=""
         class="form-control"
@@ -18,19 +20,13 @@
       </select>
     </div>
   </div>
+  <br><br>
   <app-dashboard-card
     [totalConfirmed]="totalConfirmed"
     [totalActive]="totalActive"
     [totalRecovered]="totalRecovered"
     [totalDeaths]="totalDeaths"
   ></app-dashboard-card>
-
-  <!-- <div>
-      <google-chart
-        [type]="chart.PieChart"
-        style="width: 100%"
-        [height]="chart.height"
-        [data]="datatable"
-      ></google-chart>
-    </div> -->
+</div>
+</div>
 </div>
