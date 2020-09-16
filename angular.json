@@ -95,8 +95,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -127,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "covid19-Tracker"
+  "defaultProject": "covid19-Tracker",
+  "cli": {
+    "analytics": false
+  }
 }
