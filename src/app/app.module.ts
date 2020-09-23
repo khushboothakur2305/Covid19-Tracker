@@ -34,6 +34,7 @@ import { Covid19Component } from './components/covid19/covid19.component';
     FormsModule,
     MatCardModule,
     GoogleChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
